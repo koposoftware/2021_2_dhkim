@@ -27,7 +27,8 @@
 # 4. 본인 소개
 
 본인 소개를 추가하세요
-
+|항목|내용|
+|-----|---------------------------|
 |이름 |김도희|![gdKO](/gdko.jpg)|
 |연락처 | gmlwjd6066(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
