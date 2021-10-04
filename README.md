@@ -12,23 +12,22 @@
 - 투자자에게 금융 정보를 제공하며 매매가 가능한 통합된 증권 서비스입니다.<br>
 - 
 <strong>장점</strong>
-- 투자자가 보유한 종목, 업종 구성비 등을 살펴 볼 수 있습니다. 이후 포트폴리오의 업종 구성비율인 분산투자 정보를 저장할 수 있습니다. 저장한 포트폴리오는 업종 구성비율을 유지한채 종목 추천/ 매수수량을 추천합니다.
-![22](https://user-images.githubusercontent.com/73869190/135834842-b5fa39c3-cfbb-429d-93c2-f26315d05226.PNG)
+- 투자자가 보유한 종목, 업종 구성비 등을 살펴 볼 수 있습니다. 이후 포트폴리오의 업종 구성비율인 분산투자 정보
 
-
+<img src="https://user-images.githubusercontent.com/73869190/135834842-b5fa39c3-cfbb-429d-93c2-f26315d05226.PNG" width="500" height="400"/>
 
   
 - 서비스는 참여자 모두가 이익을 취합니다. 중개인인 하나금융투자는 하트 충전으로 인한 예수금 증가로 현금흐름이 개선됩니다.
-   ![장점2](https://user-images.githubusercontent.com/73869190/135830662-b6449539-7925-49c0-87c1-7339fa324065.JPG)
 
+<img src="https://user-images.githubusercontent.com/73869190/135830662-b6449539-7925-49c0-87c1-7339fa324065.JPG" width="640" height="400"/>
   
 
 # 2. 프로젝트 제안서
 
 
    시스템 아키텍처
-   ![장점3](https://user-images.githubusercontent.com/73869190/135831214-3def1d88-f963-4048-b96b-0278e7dda82c.JPG)
 
+<img src="https://user-images.githubusercontent.com/73869190/135831214-3def1d88-f963-4048-b96b-0278e7dda82c.JPG" width="640" height="400"/>
    
    <img src="ppt.jpg"/>[발표자료](/project.pptx)<br>
    
