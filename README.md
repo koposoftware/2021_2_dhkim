@@ -25,7 +25,7 @@
 # 2. 프로젝트 제안서
 
 
-   시스템 아키텍처
+   <strong>시스템 아키텍처</strong>
 
 <img src="https://user-images.githubusercontent.com/73869190/135837821-0ff0bd5d-5466-4d68-83d2-1c514f013d81.JPG" width="600" height="300"/>
    
