@@ -21,8 +21,8 @@
    <img src="ppt.jpg"/>[발표자료](/project.pptx)<br>
 
 ## 시연 동영상 
-
-   <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://youtu.be/fY5uGsL_LnI" frameborder="0"></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/fY5uGsL_LnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
 
 # 4. 본인 소개
 
