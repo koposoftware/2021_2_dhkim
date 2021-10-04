@@ -24,16 +24,18 @@
 # 2. 프로젝트 제안서
 
 
-   <strong>시스템 아키텍처</strong>
-
-<img src="https://user-images.githubusercontent.com/73869190/135837821-0ff0bd5d-5466-4d68-83d2-1c514f013d81.JPG" width="600" height="300"/>
+  
    
    
-  [제안서](/planppt.pptx)<br>
+   <img src="https://user-images.githubusercontent.com/73869190/135846180-69287660-5f89-4156-9a54-597a2bc57e44.JPG"/>[제안서](/planppt.pptx)<br>
    
 
 # 3. 프로젝트 결과
+##시스템 아키텍처
+<img src="https://user-images.githubusercontent.com/73869190/135837821-0ff0bd5d-5466-4d68-83d2-1c514f013d81.JPG" width="600" height="300"/>
 
+##ERD
+<img src="https://user-images.githubusercontent.com/73869190/135846124-b76b3367-ec8a-4606-818a-0d04f4651d7c.JPG" width="600" height="300"/>
 
 ## 발표 ppt 
    <img src="ppt.JPG"/>[발표자료](/project.pptx)<br>
