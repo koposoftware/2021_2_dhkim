@@ -1,4 +1,4 @@
-# 프로젝트 제목
+# 하나팔로우
 
 [프로젝트 홈페이지 - https://koposoftware.github.io/template/](https://koposoftware.github.io/template/)
 
@@ -67,6 +67,7 @@
 * 인턴 : 기술보증기금 디지털  <br>
 * 교육 : 자산운용업 양성, 핀테크 서비스 기초 개발 <br>
 * 수상: 폴리텍창업경진대회 입상, 금융 특성화 학회 2015금상/2016 은상<br>
+<br>
 <br>
 # 5. 기타
 <strong>추천 알고리즘</strong>
