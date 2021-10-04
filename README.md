@@ -57,7 +57,7 @@
 
 
 
-|이름 |김도희|![gdKO](/gdko.jpg)|
+|이름 |김도희|<img src="https://user-images.githubusercontent.com/73869190/135850791-0505c321-e07c-43e1-9999-87ea096fa739.jpg"/>|
 |연락처 | gmlwjd6066(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle|
