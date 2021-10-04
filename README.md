@@ -31,11 +31,20 @@
    
 
 # 3. 프로젝트 결과
-##시스템 아키텍처
+## 시스템 아키텍처
 <img src="https://user-images.githubusercontent.com/73869190/135837821-0ff0bd5d-5466-4d68-83d2-1c514f013d81.JPG" width="600" height="300"/>
 
-##ERD
+## ERD
 <img src="https://user-images.githubusercontent.com/73869190/135846124-b76b3367-ec8a-4606-818a-0d04f4651d7c.JPG" width="600" height="300"/>
+
+## 사용기술
+- Spring MVC 기반 웹 어플리케이션 개발
+- Coolsms API를 사용한 결제 알림
+- Spring Scheduler 랭킹산정을 위한 매일 1번 수익률 업데이트 실행
+- Kakao API를 활용한 쿠폰 공유 서비스
+- Jsoup를 활용하여 재무제표, 종가 크롤링
+- Stored Procedure 기반 매수/매도, 주식뽑기, 종가 업데이트
+
 
 ## 발표 ppt 
    <img src="ppt.JPG"/>[발표자료](/project.pptx)<br>
