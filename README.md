@@ -10,11 +10,11 @@
 
 <strong>서비스</strong>
 - 투자자에게 금융 정보를 제공하며 매매가 가능한 통합된 증권 서비스입니다.<br>
-- 
-<strong>장점</strong>
-- 투자자가 보유한 종목, 업종 구성비 등을 살펴 볼 수 있습니다. 이후 포트폴리오의 업종 구성비율인 분산투자 정보
 
-<img src="https://user-images.githubusercontent.com/73869190/135834842-b5fa39c3-cfbb-429d-93c2-f26315d05226.PNG" width="600" height="400"/>
+<strong>장점</strong>
+- 투자자가 보유한 종목, 업종 구성비 등을 살펴 볼 수 있습니다. 이후 포트폴리오의 업종 구성비율인 분산투자 정보를 저장한 후 종목과 매수수량을 추천받을 수 있습니다.
+
+<img src="https://user-images.githubusercontent.com/73869190/135838174-c236d881-281b-482f-becc-9f4ae74c2714.png" width="50%" height="300"/><img src="https://user-images.githubusercontent.com/73869190/135838367-e833f96a-0d04-45e2-8f09-8d06603debc1.png" width="50%" height="300"/>
 
   
 - 서비스는 참여자 모두가 이익을 취합니다. 중개인인 하나금융투자는 하트 충전으로 인한 예수금 증가로 현금흐름이 개선됩니다.
@@ -51,7 +51,7 @@
 |연락처 | gmlwjd6066(@)naver.com|
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle|
-|자격증|  SQLD, 정보처리기사,재경관리사, 신용분석사, AFPK|
+|자격증|  SQLD, 정보처리기사, 신용분석사, AFPK|
 |수상| 폴리텍 창업경진대회 입상<br>
        |
 
