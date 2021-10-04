@@ -15,12 +15,12 @@
 
 <img src="https://user-images.githubusercontent.com/73869190/135838174-c236d881-281b-482f-becc-9f4ae74c2714.png" width="50%" height="300"/><img src="https://user-images.githubusercontent.com/73869190/135838367-e833f96a-0d04-45e2-8f09-8d06603debc1.png" width="50%" height="300"/>
 
-  
+ <br> 
 - 서비스는 참여자 모두가 이익을 취합니다. 중개인인 하나금융투자는 하트 충전으로 인한 예수금 증가로 현금흐름이 개선됩니다.
 
 <img src="https://user-images.githubusercontent.com/73869190/135830662-b6449539-7925-49c0-87c1-7339fa324065.JPG" width="700" height="300"/>
   
-
+<br>
 # 2. 프로젝트 제안서
 
 
@@ -28,15 +28,15 @@
    
    
    <img src="https://user-images.githubusercontent.com/73869190/135846180-69287660-5f89-4156-9a54-597a2bc57e44.JPG" width="700" height="300"/>[제안서](/planppt.pptx)<br>
-   
+  <br> 
 
 # 3. 프로젝트 결과
 ## 시스템 아키텍처
 <img src="https://user-images.githubusercontent.com/73869190/135837821-0ff0bd5d-5466-4d68-83d2-1c514f013d81.JPG" width="700" height="300"/>
-
+<br>
 ## ERD
 <img src="https://user-images.githubusercontent.com/73869190/135846124-b76b3367-ec8a-4606-818a-0d04f4651d7c.JPG" width="700" height="300"/>
-
+<br>
 ## 사용기술
 - Spring MVC 기반 웹 어플리케이션 개발
 - Coolsms API를 사용한 결제 알림
@@ -44,14 +44,14 @@
 - Kakao API를 활용한 쿠폰 공유 서비스
 - Jsoup를 활용하여 재무제표, 종가 크롤링
 - Stored Procedure 기반 매수/매도, 주식뽑기, 종가 업데이트
-
+<br>
 
 ## 발표 ppt 
    <img src="ppt.JPG" width="700" height="300"/>[발표자료](/project.pptx)<br>
-
+<br>
 ## 시연 동영상 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/fY5uGsL_LnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
+  <br>
 
 # 4. 본인 소개
 
@@ -63,7 +63,8 @@
 | | Backend - Java, Spring, Oracle|
 |자격증|  SQLD, 정보처리기사, 신용분석사, AFPK|
 |수상| 폴리텍 창업경진대회 입상, 특성화 금융학회 2015 금상, 특성화 금융학회 2016 은상|
-
+|인턴| 기술보증기금 디지털TF|
+|교육| 자산운용업 인력양성, 핀테크 서비스 기초 개발|<br>
 # 5. 기타
 <strong>추천 알고리즘</strong>
 - 추천모델로 잔여이익모델(RIM)사용
