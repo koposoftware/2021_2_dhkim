@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="account.AccountDAO">
+
+
+
+<!-- 계좌 전체 조회 -->
+<select id="accountAll" parameterType="memberVO" resultType="accountVO">
+select * from hn_acc
+where member_id=#{member_id}
+</select>
+
+
+
+<!-- 매일 계좌잔액가저오기 -->
+<select id="dailyaccount" parameterType="wagglejoinVO" resultType="accountdailyVO">
+select * from (select * from acc_daily
+where acc_num=#{member_account} order by no desc) where rownum=1
+</select>
+
+<!-- 보유종목리스트 -->
+<select id="mystocklist" parameterType="wagglejoinVO" resultType="mystockVO">
+select a.stock_code, a.stock_num, a.stock_code, a.buyprice, a.stock_diff, a.stock_diff_rate,
+b.stock_close,b.stock_name
+from buystock a join (select * from(select * from hn_stock_close order by close_date desc)
+<![CDATA[where rownum <= 299]]>) b
+on  a.acc_num=#{member_account} and a.stock_code=b.stock_code
+</select>
+
+
+<!-- 최대매수수량 확인하기 위한 잔액조회 -->
+<select id ="maxbuy" parameterType="buysellVO" resultType="int">
+select * from (select tcash from acc_daily 
+where acc_num=#{member_account} order by no desc) where rownum=1
+</select>
+
+<!-- 최대 매도수량을 확인하기 위한 보유 종목의 종목수량 조회 -->
+<select id="maxsell" parameterType="buysellVO" resultType="int">
+select stock_num from buystock where acc_num=#{member_account} and stock_code=#{stock_code}
+</select>
+
+
+
+
+<!-- 계좌번호별 최근 매수 5위 매도5위 -->
+<select id="5buysell" parameterType="buysellVO" resultType="buysellVO">
+select * from (select * from transaction
+where acc_num=#{member_account} and tra_type=#{tra_type} order by tra_date desc)<![CDATA[where rownum <= 5]]>
+
+</select> 
+
+
+<!-- 내가 그사람 팔로하는지? -->
+<select id="selectfollow" parameterType="followVO" resultType="followVO">
+select * from follow where me=#{me} and likeman=#{likeman} 
+
+</select>
+
+
+
+<!--내가 좋아하는 사람의 숫자 -->
+<select id ="follow" parameterType= "followVO" resultType="int">
+select nvl(count,0) count from (select count(*) count from follow where me=#{me} group by me)
+
+</select> 
+
+
+<!-- 나를 좋아하는 사람 숫자보기 -->
+<select id ="follower" parameterType= "followVO" resultType="int">
+select nvl(count,0) count from(select count(*) count from follow where likeman=#{likeman} group by likeman)
+</select> 
+
+
+<select id="changeheart" parameterType="changeheartVO" statementType="CALLABLE">
+call changeheart(#{tono},#{fromno},#{heart})
+</select>
+
+
+</mapper>

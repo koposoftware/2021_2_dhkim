@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="waggle.WaggleDAO">
+
+<!-- 가입하기 -->
+<select id="join" statementType="CALLABLE" parameterType="wagglejoinVO">
+ call join( #{member_id},#{nickname}, #{member_account})
+
+
+</select>
+
+<!-- 가입여부 ?? -->
+<select id="joincheck" parameterType="wagglejoinVO" resultType="int">
+select count(*) from hn_waggle where member_id=#{member_id}
+</select>
+
+<!-- 와글 등록할 정보 가져오기 -->
+<select id="waggle" parameterType="memberVO" resultType="wagglejoinVO">
+select * from hn_waggle where member_id=#{member_id}
+</select>
+
+<!-- 하트갯수 조회 -->
+<select id="heartselect" parameterType="wagglejoinVO" resultType="int">
+select heart from hn_waggle where no=#{no} 
+</select>
+
+<!-- 하트충전 -->
+<select id="addheart" statementType="CALLABLE" parameterType="addheartVO">
+call addheart(#{heart}, #{no},#{money}, #{anum})
+</select>
+
+<!--하트 보내기(교환)-->
+<select id="changeheart" statementType="CALLABLE" parameterType="changeheartVO">
+call changeheart(#{tono},#{fromno},#{heart})
+</select>
+
+<!--  쿠폰교환  -->
+<select id="change" statementType="CALLABLE" parameterType="couponVO">
+call changecoupon(#{no},#{heart},#{couponname})
+</select>
+
+<!-- 쿠폰삭제 -->
+<delete id="deletecoupon" parameterType="couponVO">
+delete from hn_coupon where couponid=#{couponid} and no=#{no}
+</delete>
+<!-- 쿠폰조회 -->
+<select id="selectcoupon" parameterType="int" resultType="couponVO">
+select * from hn_coupon where no=#{no}
+</select>
+
+
+<!-- 계좌잔액구하기 -->
+<select id="selectbal" parameterType="wagglejoinVO" resultType="accountdailyVO">
+select tcash from (select * from acc_daily where acc_num=#{member_account} 
+        order by no desc)where rownum =1
+</select>
+
+<!-- 와글와글 수익률 기준 랭킹조회 -->
+<select id="wagglerank" resultType="ranklistVO">
+select * from (select rate, stockvalue,no,nickname,hart,
+rank() over(order by rate desc) rank from(select a.rate ,a.stockvalue,b.no, b.nickname, b.hart from hn_waggle b , 
+(select * from (SELECT acc_num,rate, stockvalue,
+RANK() OVER (PARTITION BY acc_num ORDER BY no DESC) AS RANK
+FROM acc_daily) where rank=1) a
+where b.member_account = a.acc_num) order by rank) where <![CDATA[rownum <=10]]>
+</select>
+
+<!-- 와글와글 거래대금 기준 랭킹조회 -->
+<select id="wagglevalue" resultType="ranklistVO">
+select * from (select rate, stockvalue,no,nickname,hart,
+rank() over(order by stockvalue desc) rank from(select a.rate ,a.stockvalue,b.no, b.nickname, b.hart from hn_waggle b , 
+(select * from (SELECT acc_num,rate, stockvalue,
+RANK() OVER (PARTITION BY acc_num ORDER BY no DESC) AS RANK
+FROM acc_daily) where rank=1) a
+where b.member_account = a.acc_num) order by stockvalue desc) where <![CDATA[rownum <=10]]>
+</select>
+
+
+
+<!-- 나의등수및 수익률과 포트폴리오보기 -->
+<select id="myrank" resultType="ranklistVO" parameterType="wagglejoinVO">
+select rate, stockvalue,no,nickname,hart,rank from(select rate, stockvalue,no,nickname,hart,
+rank() over(order by rate desc) rank from(select a.rate ,a.stockvalue,b.no, b.nickname, b.hart from hn_waggle b , 
+(select * from (SELECT acc_num,rate, stockvalue,
+RANK() OVER (PARTITION BY acc_num ORDER BY no DESC) AS RANK
+FROM acc_daily) where rank=1) a
+where b.member_account = a.acc_num) order by rank) where no=#{no}
+</select>
+
+
+<select id="mystockvalue" resultType="ranklistVO" parameterType="wagglejoinVO">
+select rate, stockvalue,no,nickname,hart,rank from(select rate, stockvalue,no,nickname,hart,
+rank() over(order by stockvalue desc) rank from(select a.rate ,a.stockvalue,b.no, b.nickname, b.hart from hn_waggle b , 
+(select * from (SELECT acc_num,rate, stockvalue,
+RANK() OVER (PARTITION BY acc_num ORDER BY no DESC) AS RANK
+FROM acc_daily) where rank=1) a
+where b.member_account = a.acc_num) order by stockvalue desc) where no=#{no}
+</select>
+
+
+
+<select id="typecompany" resultType="detailstocktypeVO" parameterType="buysellVO" >
+select a.acc_num,c.stock_close, a.stock_code, a.stock_num, a.buyprice, 
+(c.stock_close-a.buyprice)/a.buyprice profit, 
+RATIO_TO_REPORT(c.stock_close*a.stock_num) OVER() AS stockrate,
+b.stock_name, b.stock_type from (select * from buystock where acc_num=#{member_account}) a,
+(select * from hn_stock_code where stock_type=#{stock_type}) b, 
+(select * from (select * from hn_stock_close order by close_date desc)where <![CDATA[rownum <=299]]>) c
+where a.stock_code=b.stock_code and c.stock_code=b.stock_code
+</select>
+
+
+<!-- 계좌번호조회 -->
+<select id="selectaccount" parameterType="waggleJoinVO" resultType="waggleJoinVO">
+select * from hn_waggle where no=#{no}
+</select>
+
+<!-- 계좌당 가지고 있는 종목타입별 가치 및 비중-->
+<select id="stockweight" resultType="stockweightVO" parameterType="wagglejoinVO">
+select value, stock_type, ratio_to_report(value) over() valuerate from (select sum(stock_value*stock_num)as value ,stock_type from (select a.stock_value, a.stock_num, 
+b.stock_type from buystock a join (select c.stock_code,c.stock_close,c.close_date, c.stock_name,
+k.stock_type from (select * from(select * from hn_stock_close order by close_date desc)
+where<![CDATA[rownum <=299]]>) c,hn_stock_code k where c. stock_code=k.stock_code) b
+on  a.acc_num=#{member_account} and a.stock_code=b.stock_code) group by stock_type) order by value desc
+</select>
+
+
+
+
+<!-- 계좌번호별 100일간 수익률 조회하기 -->
+ <select id="selectrate" parameterType="wagglejoinVO" resultType="accountdailyVO">   
+select rate,wdate from (
+select rate,wdate, no ,RANK() OVER (PARTITION BY wdate
+    ORDER BY wdate,no desc) rank from acc_daily where acc_num=#{member_account}and dayupdate='t'
+    ) where 
+    rank=1
+</select>
+
+
+<select id ="lowrate" parameterType="waggleJoinVO" resultType="accountdailyVO">
+select * from (select rate,wdate from (
+select rate,wdate, no ,RANK() OVER (PARTITION BY wdate
+    ORDER BY wdate,no desc) rank from acc_daily where acc_num={member_account}and dayupdate='t'
+    ) where 
+    rank=1 order by rate)where rownum =1; 
+
+</select>
+
+<select id="highrate" parameterType="waggleJoinVO" resultType="accountdailyVO">
+select * from (select rate,wdate from (
+select rate,wdate, no ,RANK() OVER (PARTITION BY wdate
+    ORDER BY wdate,no desc) rank from acc_daily where acc_num={member_account}and dayupdate='t'
+    ) where 
+    rank=1 order by rate desc)where rownum =1; 
+
+
+
+</select>
+
+</mapper>
+
+

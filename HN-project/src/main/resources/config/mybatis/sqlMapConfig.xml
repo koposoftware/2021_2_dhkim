@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<typeAliases>
+		<typeAlias type="kr.ac.kopo.vo.MemberVO"
+			alias="memberVO" />
+		<typeAlias type="kr.ac.kopo.vo.WaggleJoinVO"
+			alias="wagglejoinVO" />
+		<typeAlias type="kr.ac.kopo.vo.AccountVO"
+			alias="accountVO" />
+		<typeAlias type="kr.ac.kopo.vo.AddHeartVO"
+			alias="addheartVO" />	
+		<typeAlias type="kr.ac.kopo.vo.ChangeHeartVO"
+			alias="changeheartVO" />		
+		<typeAlias type="kr.ac.kopo.vo.CouponVO"
+			alias="couponVO" />		
+		<typeAlias type="kr.ac.kopo.vo.AccountDailyVO"
+			alias="accountdailyVO" />	
+		<typeAlias type="kr.ac.kopo.vo.StockTodayVO"
+			alias="stocktodayVO" />	
+		<typeAlias type="kr.ac.kopo.vo.StockCodeVO"
+			alias="stockcodeVO" />	
+		<typeAlias type="kr.ac.kopo.vo.StockBuySellVO"
+			alias="buysellVO" />	
+		<typeAlias type="kr.ac.kopo.vo.MyStockVO"
+			alias="mystockVO" />	
+		<typeAlias type="kr.ac.kopo.vo.RankListVO"
+			alias="ranklistVO" />	
+		<typeAlias type="kr.ac.kopo.vo.StockWeightVO"
+			alias="stockweightVO" />
+		<typeAlias type="kr.ac.kopo.vo.FollowVO"
+			alias="followVO" />	
+		<typeAlias type="kr.ac.kopo.vo.LikeCompanyVO"
+			alias="likecompanyVO" />
+		<typeAlias type="kr.ac.kopo.vo.PortfolioVO"
+			alias="portfolioVO" />	
+			
+		<typeAlias type="kr.ac.kopo.vo.DetailStockTypeVO"
+			alias="detailstocktypeVO" />
+			<typeAlias type="kr.ac.kopo.vo.StockInfoVO"
+			alias="stockinfoVO" />										
+		
+	</typeAliases>
+</configuration>

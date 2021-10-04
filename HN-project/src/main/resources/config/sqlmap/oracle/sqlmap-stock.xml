@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="stock.StockDAO">
+
+
+
+<!-- 계좌 전체 조회 -->
+<select id="accountAll" parameterType="memberVO" resultType="accountVO">
+select * from hn_acc
+where member_id=#{member_id}
+
+</select>
+
+
+
+<!-- 매일 계좌잔액가저오기 -->
+<select id="dailyaccount" parameterType="int" resultType="accountdailyVO">
+select * from acc_daliy
+where no=#{no} order by wdate desc
+</select>
+
+<!-- 종목리스트 뽑기 -->
+<select id="stocktoday" resultType="stocktodayVO">
+select * from 
+(select * from hn_stock_close order by close_date desc) 
+where <![CDATA[rownum <=299]]>
+</select>
+
+<!-- 종목조회 하나 -->
+<select id="stockonetoday" resultType="stocktodayVO" parameterType="stocktodayVO">
+  select * from (select * from HN_STOCK_CLOSE where stock_code= #{stock_code} order by close_date desc)
+where <![CDATA[rownum =1]]>
+</select>
+
+<select id="randomstock" statementType="CALLABLE" parameterType="buysellVO">
+call randomstock(#{acc_num},#{stock_name})
+</select>
+
+
+
+<!-- 종목코드로 이름 등등 지수 가져오기 -->
+<select id="companyinfo" parameterType="stockcodeVO" resultType="stockcodeVO">
+select * from hn_stock_code where stock_code = #{stock_code}
+</select>
+
+<!-- 매수 -->
+<select id="stockbuy" statementType="CALLABLE" parameterType="buysellVO">
+call buy(#{member_account}, #{stock_code},#{stock_num},#{fee})
+</select>
+
+<!-- 매도 -->
+<select id="stocksell" statementType="CALLABLE" parameterType="buysellVO">
+call sell(#{member_account}, #{stock_code},#{stock_num},#{fee})
+</select>
+
+<!-- 기업가치 -->
+<select id="insertvalue" parameterType="stockcodeVO">
+update hn_stock_code set value=#{value} where stock_code=#{stock_code}
+</select>
+
+<!-- 매일종가 입력 -->
+<select id="insertclose2" statementType="CALLABLE" parameterType="stocktodayVO">
+call dailyupdate(#{close_date}, #{stock_code},#{stock_close},#{stock_diff},#{stock_name},#{y_diff},#{volum})
+
+</select>
+<!-- 모든종목코드 받아오는 쿼리 -->
+<select id="selectcode" resultType="string">
+select stock_code from hn_stock_code
+</select>
+
+<select id="selectcodename" resultType="stocktodayVO">
+select stock_code,stock_name from hn_stock_code
+</select>
+
+<insert id="inserttext" parameterType="stockcodeVO">
+insert into stock_detail(stock_code,stocktext1, stocktext2, stocktext3) values(#{stock_code},#{stocktext1},#{stocktext2},#{stocktext3})
+</insert>
+
+<!-- 종목정보 -->
+<select id="stockinfo" parameterType="stockcodeVO" resultType="stockcodeVO">
+select * from stock_detail where stock_code=#{stock_code}
+</select>
+<!-- 종가차트 그리기 -->
+<select id="linestock" resultType="stocktodayVO" parameterType="stocktodayVO">
+select close_date, stock_close from hn_stock_close where stock_code=#{stock_code} order by close_date
+</select>
+
+<select id="stocksearch" resultType="stocktodayVO" parameterType="stocktodayVO">
+select * from (select * from 
+(select * from hn_stock_close order by close_date desc) 
+where <![CDATA[rownum <=299]]>) where stock_name=#{stock_name}
+</select>
+</mapper>
