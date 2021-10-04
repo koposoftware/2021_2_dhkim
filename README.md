@@ -62,7 +62,7 @@
 |skill set| Frontend - HTML, CSS, Javascript|
 | | Backend - Java, Spring, Oracle|
 |자격증|  SQLD, 정보처리기사, 신용분석사, AFPK|
-|수상| 폴리텍 창업경진대회 입상|
+|수상| 폴리텍 창업경진대회 입상, 특성화 금융학회 2015 금상, 특성화 금융학회 2016 은상|
 
 # 5. 기타
 <strong>추천 알고리즘</strong>
