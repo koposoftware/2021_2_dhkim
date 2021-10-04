@@ -27,7 +27,7 @@
   
    
    
-   <img src="https://user-images.githubusercontent.com/73869190/135846180-69287660-5f89-4156-9a54-597a2bc57e44.JPG"/>[제안서](/planppt.pptx)<br>
+   <img src="https://user-images.githubusercontent.com/73869190/135846180-69287660-5f89-4156-9a54-597a2bc57e44.JPG" width="600" height="300"/>[제안서](/planppt.pptx)<br>
    
 
 # 3. 프로젝트 결과
@@ -47,7 +47,7 @@
 
 
 ## 발표 ppt 
-   <img src="ppt.JPG"/>[발표자료](/project.pptx)<br>
+   <img src="ppt.JPG" width="600" height="300"/>[발표자료](/project.pptx)<br>
 
 ## 시연 동영상 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/fY5uGsL_LnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -65,7 +65,9 @@
 |수상| 폴리텍 창업경진대회 입상|
 
 # 5. 기타
-그외 프로젝트를 더욱 설명할수 있는 것들을 추가하세요
+<strong>잔여이익모델</strong>
+- 추천모델로 잔여이익모델(RIM)사용
+- 해당 모델을 통해 기업의 목표주가 설정
 
 # 홈페이지 설정
  본인 repository에서 "Setting"를 들어가서 GitHub Pages에서 설정 변경.
