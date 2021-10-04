@@ -29,7 +29,7 @@
 <img src="https://user-images.githubusercontent.com/73869190/135837821-0ff0bd5d-5466-4d68-83d2-1c514f013d81.JPG" width="600" height="300"/>
    
    
-   <img src="ppt.jpg" width="600"/>[발표자료](/project.pptx)<br>
+  [제안서](/planppt.pptx)<br>
    
 
 # 3. 프로젝트 결과
