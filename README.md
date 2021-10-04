@@ -1,6 +1,6 @@
 # 하나팔로우
 
-[프로젝트 홈페이지 - https://koposoftware.github.io/template/](https://koposoftware.github.io/template/)
+[프로젝트 홈페이지 - https://koposoftware.github.io/2021_2_dhkim/](https://koposoftware.github.io/2021_2_dhkim/)
 
 # 1. 프로젝트 개요
 
