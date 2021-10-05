@@ -18,15 +18,11 @@
 
 
 <strong>장점</strong><br>
-- 서비스는 참여자 모두가 이익을 취합니다. 중개인인 하나금융투자는 하트 충전으로 인한 예수금 증가로 현금흐름이 개선됩니다.<br>
 - 마음에 드는 포트폴리오의 업종 구성비율과 업종명을 저장할 수 있습니다.<br>
 - 저장한 포트폴리오는 기준금액(예수금 또는 입력금액)에서 업종 구성비율을 유지한채 종목과 매수수량을 추천받을 수 있습니다.<br>
 - 아래의 그림과 같이 매수를 하면 기준금액(예수금) 대비 미디어 30%, 통신장비 40%, 음식료품 29%의 비율이 유지됩니다. 따라서 자동분산투자가 가능합니다.<br>
-<img src="https://user-images.githubusercontent.com/73869190/135838174-c236d881-281b-482f-becc-9f4ae74c2714.png" width="45%" height="300"/><img src="https://user-images.githubusercontent.com/73869190/135838367-e833f96a-0d04-45e2-8f09-8d06603debc1.png" width="45%" height="300"/>
-
- <br> 
-
-
+<img src="https://user-images.githubusercontent.com/73869190/135838174-c236d881-281b-482f-becc-9f4ae74c2714.png" width="45%" height="300"/><img src="https://user-images.githubusercontent.com/73869190/135838367-e833f96a-0d04-45e2-8f09-8d06603debc1.png" width="45%" height="300"/><br>
+- 서비스는 참여자 모두가 이익을 취합니다. 중개인인 하나금융투자는 하트 충전으로 인한 예수금 증가로 현금흐름이 개선됩니다.<br> 
 <img src="https://user-images.githubusercontent.com/73869190/135830662-b6449539-7925-49c0-87c1-7339fa324065.JPG" width="700" height="300"/>
   
 <br>
