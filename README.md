@@ -35,7 +35,7 @@
 <img src="https://user-images.githubusercontent.com/73869190/135837821-0ff0bd5d-5466-4d68-83d2-1c514f013d81.JPG" width="700" height="300"/>
 <br>
 ## ERD
-<img src="https://user-images.githubusercontent.com/73869190/135846124-b76b3367-ec8a-4606-818a-0d04f4651d7c.JPG" width="700" height="300"/>
+<img src="https://user-images.githubusercontent.com/73869190/135972162-44a0eeae-8286-4dd0-92f4-89cce182ed71.PNG" width="700" height="300"/>
 <br>
 ## 사용기술
 - Spring MVC 기반 웹 어플리케이션 개발
