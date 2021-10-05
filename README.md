@@ -12,10 +12,10 @@
 
 - 수익률/거래금액 기준으로 사용자의 랭킹이 부여됩니다. 랭킹 10위까지 금융인플루언서로 선정되어 다른 유저는 포트폴리오를 열람할 수 있습니다.
 - 랭킹투자자의 포트폴리오는 업종별 구성비율을 나타내어 분산투자 종목업종별 정보를 알려줍니다.
-![image](https://user-images.githubusercontent.com/73869190/135980659-fa45491b-c37a-4652-b0ea-924af02c37e7.png)
+<img src="https://user-images.githubusercontent.com/73869190/135980659-fa45491b-c37a-4652-b0ea-924af02c37e7.png" width="700" height="300"/>
 
 - 랭킹투자자와 계좌수익률을 비교할 수 있습니다.
-![image](https://user-images.githubusercontent.com/73869190/135980947-f03e38a1-b91b-4a24-879e-a096c2fd0e42.png)
+<img src="https://user-images.githubusercontent.com/73869190/135980947-f03e38a1-b91b-4a24-879e-a096c2fd0e42.png" width="700" height="300"/>
 
 -매수매도 기능이 제공됩니다.
 
