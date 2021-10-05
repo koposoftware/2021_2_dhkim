@@ -52,6 +52,12 @@
    <img src="ppt.JPG" width="700" height="300"/>[발표자료](/project.pptx)<br>
 <br>
 ## 시연 동영상 
+<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/embed/fY5uGsL_LnI">
+<img src="https://user-images.githubusercontent.com/73869190/135979877-d8579484-2c5c-41ce-ad01-2c0091dc0985.PNG" style="width:800px;">
+</a>
+
+
+
 <iframe width="640" height="360" src="https://www.youtube.com/embed/fY5uGsL_LnI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <br>
 
