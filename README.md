@@ -66,7 +66,6 @@
 # 4. 본인 소개
 
 
-<img src="https://user-images.githubusercontent.com/73869190/135850791-0505c321-e07c-43e1-9999-87ea096fa739.jpg" width="70" height="90"/>  
 
 <br>
 # 5. 기타
