@@ -67,19 +67,11 @@
 
 
 <img src="https://user-images.githubusercontent.com/73869190/135850791-0505c321-e07c-43e1-9999-87ea096fa739.jpg" width="70" height="90"/>  
-* 이름: 김도희 <br>
-* 연락처: gmlwjd6066(@)naver.com  <br>
-* skill set : Frontend - HTML, CSS, Javascript <br> 
-              Backend - Java, Spring, Oracle  <br> 
-* 자격증 :  SQLD, 정보처리기사, 신용분석사, AFPK  <br> 
-* 인턴 : 기술보증기금 디지털  <br>
-* 교육 : 자산운용업 양성, 핀테크 서비스 기초 개발 <br>
-* 수상: 폴리텍창업경진대회 입상, 금융 특성화 학회 2015금상/2016 은상<br>
-<br>
+
 <br>
 # 5. 기타
 <strong>추천 알고리즘</strong>
-- 추천모델로 잔여이익모델(RIM)사용
+- 추천모델로 잔여이익모델사용
 - 해당 모델을 통해 기업의 목표주가 설정
 - 주가 업데이트시 목표가와 괴리율 측정
 - 괴리율에 순위 적용 후, 1순위 부터 추천
